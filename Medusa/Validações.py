@@ -1,5 +1,4 @@
 import re
-
 from wtforms.validators import ValidationError
 def caractere_special(form,field):
     passowrd = field.data
