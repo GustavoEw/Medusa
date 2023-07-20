@@ -1,7 +1,6 @@
 from Medusa import database, app, login_manager
 from datetime import datetime
 from flask_login import UserMixin
-@login_manager.user_loader
 
 class Usuario(database.Model):
     id = database.Column(database.Integer, primary_key=True)
