@@ -1,6 +1,19 @@
 {% extends "homepage.html" %}
 
 {% block title%}
-
+   Medusa - Criar conta
 {% endblock%}
 
+{% block body%}
+        <form method="POST">
+        {{
+        form.csrf_token
+        }}
+        {{form.nome.label()}}
+        {{form.nome()}}
+        {{form.senha.label()}}
+        {{form.senha()}}
+        {{form.botao()}}
+
+    </form>
+{%endblock%}

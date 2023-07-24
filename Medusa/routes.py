@@ -11,18 +11,19 @@ def homepage():
     if formLogin.validate_on_submit():
         pass
     return render_template("homepage.html", form=formLogin)
-@app.route("/criar-conta", methods=['GET, POST'])
+@app.route("/criarconta", methods=['GET, POST'])
 def criarConta():
     formcriarconta= FormCriarConta()
-    return render_template("criarconta.html", form = formcriarconta)
+    return render_template("criarconta.html", form=formcriarconta)
 @app.route("/<usuario>", methods=['GET, POST'])
 @login_required
 def perfil(usuario):
-    membro = Formcriarmembro
-    return render_template("perfil.html", usuario = usuario, form = Formcriarmembro)
+    membro = Formcriarmembro()
+    return render_template("perfil.html", usuario = usuario, form = membro)
 
 @app.route("/<Membros>")
 def membros(Membros):
+
     return render_template("carteira.html")
 
     
