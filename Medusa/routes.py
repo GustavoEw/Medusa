@@ -14,7 +14,7 @@ def homepage():
 @app.route("/criarconta", methods=['GET, POST'])
 def criarConta():
     formcriarconta= FormCriarConta()
-    return render_template("criarconta.html", form=formcriarconta)
+    return render_template("criarconta.html", formulario=formcriarconta)
 @app.route("/<usuario>", methods=['GET, POST'])
 @login_required
 def perfil(usuario):

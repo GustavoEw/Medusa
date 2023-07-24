@@ -5,15 +5,16 @@
 {% endblock%}
 
 {% block body%}
-        <form method="POST">
+        <h1>Crar conta</h1>
+<form  method="post">
         {{
-        form.csrf_token
-        }}
-        {{form.nome.label()}}
-        {{form.nome()}}
-        {{form.senha.label()}}
-        {{form.senha()}}
-        {{form.botao()}}
+formulario.csrf_token
+}}
+{{formormulario.nome.label()}}
+{{formulario.nome()}}
+{{formulario.senha.label()}}
+{{formulario.senha()}}
+{{formulario.botao()}}
+</form>
 
-    </form>
 {%endblock%}
