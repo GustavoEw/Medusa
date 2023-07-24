@@ -6,12 +6,12 @@ from Medusa.Validações import caractere_special
 from Medusa.models import Usuario
 from flask_wtf.file import FileField, FileRequired
 class Formlogin(FlaskForm):
-    email = StringField("E-mail",validators=[DataRequired(), Email,()] )
+    email = StringField("E-mail",validators=[DataRequired(), Email()] )
     senha = PasswordField("Senha", validators=[DataRequired()])
     botao = SubmitField("Fazer login")
 
 class FormCriarConta(FlaskForm):
-    email = StringField("Email", validators= [DataRequired(), Email,()])
+    email = StringField("Email", validators= [DataRequired()])
     username =StringField("Username", validators=[DataRequired()])
     senha = PasswordField("Senha", validators=[DataRequired(), length(6,20), caractere_special])
     confirmacao_senha =PasswordField("Confirmação de Senha", validators=[DataRequired(), equal_to("senha")])
@@ -27,5 +27,5 @@ class Formcriarmembro(FlaskForm):
     numeroDaMatricula = IntegerField("Numero da Matricula", validators=[DataRequired()])
     photo= FileField("Foto")
     dataDeIniciação = DateField("Data De Iniciação", validators=[DataRequired()],format='%d-%m-%Y')
-    
+    botao_confirmacao = SubmitField("Criar conta")
    

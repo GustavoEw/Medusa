@@ -5,12 +5,12 @@ from Medusa import app
 from flask_login import login_required
 from Medusa.forms import FormCriarConta, Formlogin , Formcriarmembro
 
-@app.route("/", methods=['GET, POST'])
+@app.route("/", methods=['GET', 'POST'])
 def homepage():
     formLogin = Formlogin()
     if formLogin.validate_on_submit():
         pass
-    return render_template("homepage.html", form= formLogin)
+    return render_template("homepage.html", form=formLogin)
 @app.route("/criar-conta", methods=['GET, POST'])
 def criarConta():
     formcriarconta= FormCriarConta()
